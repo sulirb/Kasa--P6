@@ -1,0 +1,18 @@
+.message {
+  color: #ff6060;
+  text-align: center;
+  margin: 5rem;
+  &__h1 {
+    font-size: 288px;
+    margin: 0;
+    padding: 0;
+  }
+  &__oups {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  &__ret {
+    font-size: 18px;
+    color: #ff6060;
+  }
+}

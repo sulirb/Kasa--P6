@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 5rem;
+  &__logo {
+    width: 150 px;
+  }
+  &__nav {
+    &__ul {
+      list-style-type: none;
+      display: flex;
+      &__li {
+        &__a {
+          color: #ff6060;
+          text-decoration: none;
+          margin: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
