@@ -16,10 +16,9 @@ function Home() {
     <div>
       <h1>Page d&apos;accueil</h1>
       <section>
-        {data &&
-          data.map((item) => (
-            <Card key={item.id} title={item.title} picture={item.cover} />
-          ))}
+        {data?.map((item) =>
+          (<Card key={item.id} title={item.title} picture={item.cover} />)()
+        )}
       </section>
     </div>
   );

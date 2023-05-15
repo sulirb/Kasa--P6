@@ -16,6 +16,9 @@
           margin: 15px;
           font-size: 18px;
         }
+        &__a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
