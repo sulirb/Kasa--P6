@@ -1,6 +1,7 @@
 import Card from "../components/card";
 import { useFetch } from "../utils/api";
 import "./home.scss";
+import { HomeBanner } from "../components/banner";
 
 function Home() {
   const { data, isLoading, error } = useFetch();
@@ -13,11 +14,14 @@ function Home() {
     return <div>Erreur lors du chargement des données.</div>;
   }
   return (
-    <section className="grid-container">
-      {data.map((item) => (
-        <Card key={item.id} title={item.title} picture={item.cover} />
-      ))}
-    </section>
+    <div>
+      <HomeBanner />
+      <section className="grid-container">
+        {data.map((item) => (
+          <Card key={item.id} title={item.title} picture={item.cover} />
+        ))}
+      </section>
+    </div>
   );
 }
 

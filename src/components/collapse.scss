@@ -1,0 +1,9 @@
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 5rem;
+  &__toggle {
+    background-color: #ff6060;
+    color: #ffffff;
+  }
+}
