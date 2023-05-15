@@ -3,7 +3,7 @@ import "./header.scss";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <div className="header__logo">
         <img src={Logo} alt="logo" />
       </div>
@@ -21,7 +21,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 

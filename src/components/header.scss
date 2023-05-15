@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin: 2rem 5rem;
+  align-items: center;
   &__logo {
     width: 150 px;
   }
@@ -15,6 +16,7 @@
           text-decoration: none;
           margin: 15px;
           font-size: 18px;
+          font-weight: 500;
         }
         &__a:hover {
           text-decoration: underline;

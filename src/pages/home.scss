@@ -1,0 +1,9 @@
+.grid-container {
+  margin: 2rem 5rem;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}

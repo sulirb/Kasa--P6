@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
-import DefaultPicture from "../assets/rectangle.png";
+import "./card.scss";
 
 function Card({ picture, title, href }) {
   return (
-    <a href={href}>
-      <div>
-        <img src={picture} alt="logo" />
-        <div>
-          <p>{title}</p>
-        </div>
+    <a href={href} className="card">
+      <div className="card__container">
+        <img src={picture} alt="logo" className="card__container__picture" />
+        <div className="card__container__title">{title}</div>
       </div>
     </a>
   );
@@ -21,8 +19,6 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  title: "",
-  picture: DefaultPicture,
   href: "/logement/:ficheNumber",
 };
 

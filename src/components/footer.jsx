@@ -3,12 +3,12 @@ import "./footer.scss";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer__logo">
         <img src={whiteLogo} alt="logo" />
       </div>
       <span className="footer__span">© 2020 Kasa. All rights reserved</span>
-    </div>
+    </footer>
   );
 }
 
