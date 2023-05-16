@@ -3,10 +3,10 @@ import Collapse from "../components/collapse";
 
 function Propos() {
   return (
-    <div>
+    <section>
       <AboutBanner />
       <Collapse />
-    </div>
+    </section>
   );
 }
 
