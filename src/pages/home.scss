@@ -2,13 +2,13 @@
   margin: 2rem 5rem;
   padding: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto auto auto;
   gap: 4rem;
   background-color: #f6f6f6;
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }

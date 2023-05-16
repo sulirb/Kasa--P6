@@ -6,7 +6,9 @@ function Card({ picture, title, href }) {
     <a href={href} className="card">
       <div className="card__container">
         <img src={picture} alt="logo" className="card__container__picture" />
-        <div className="card__container__title">{title}</div>
+        <div className="card__container__title">
+          <span className="card__container__title__span">{title}</span>
+        </div>
       </div>
     </a>
   );

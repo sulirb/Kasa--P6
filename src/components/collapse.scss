@@ -1,9 +1,18 @@
 .collapse-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem 5rem;
+  margin: 2rem 15rem;
+
   &__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8em;
+    padding: 0.2em 0.5em;
+    border-radius: 2px;
+    border-color: #ff6060;
     background-color: #ff6060;
+    font-size: 18px;
     color: #ffffff;
   }
 }

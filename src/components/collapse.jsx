@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "./collapse.scss";
 
 function Collapse() {
@@ -10,7 +11,8 @@ function Collapse() {
         className="collapse-container__toggle"
         onClick={() => setVisible([!visible[0], false, false, false])}
       >
-        Fiabilité
+        <span>Fiabilité</span>
+        {visible[0] ? <FaChevronUp /> : <FaChevronDown />}
       </button>
 
       {visible[0] && (
@@ -24,7 +26,8 @@ function Collapse() {
         className="collapse-container__toggle"
         onClick={() => setVisible([false, !visible[1], false, false])}
       >
-        Respect
+        <span>Respect</span>
+        {visible[1] ? <FaChevronUp /> : <FaChevronDown />}
       </button>
       {visible[1] && (
         <div>
@@ -37,7 +40,8 @@ function Collapse() {
         className="collapse-container__toggle"
         onClick={() => setVisible([false, false, !visible[2], false])}
       >
-        Service
+        <span>Service</span>
+        {visible[2] ? <FaChevronUp /> : <FaChevronDown />}
       </button>
       {visible[2] && (
         <div>
@@ -50,7 +54,8 @@ function Collapse() {
         className="collapse-container__toggle"
         onClick={() => setVisible([false, false, false, !visible[3]])}
       >
-        Sécurité
+        <span>Sécurité</span>
+        {visible[3] ? <FaChevronUp /> : <FaChevronDown />}
       </button>
       {visible[3] && (
         <div>
