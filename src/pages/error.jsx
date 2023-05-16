@@ -1,4 +1,5 @@
 import "./error.scss";
+import { Link } from "react-router-dom";
 
 function Error() {
   return (
@@ -7,9 +8,9 @@ function Error() {
       <p className="message__oups">
         Oups! La page que vous demandez n&apos;existe pas.
       </p>
-      <a href="/" className="message__ret">
+      <Link to="/" className="message__ret">
         Retournez sur la page d&apos;accueil.
-      </a>
+      </Link>
     </div>
   );
 }

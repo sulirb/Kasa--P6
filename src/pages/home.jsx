@@ -1,11 +1,11 @@
 import Card from "../components/card";
-import { useFetch } from "../utils/api";
+import { useFetchHouses } from "../utils/api";
 import "./home.scss";
 import { HomeBanner } from "../components/banner";
 import Error from "./error";
 
 function Home() {
-  const { data, isLoading, error } = useFetch();
+  const { data, isLoading, error } = useFetchHouses();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -19,7 +19,12 @@ function Home() {
       <HomeBanner />
       <section className="grid-container">
         {data.map((item) => (
-          <Card key={item.id} title={item.title} picture={item.cover} />
+          <Card
+            key={item.id}
+            title={item.title}
+            picture={item.cover}
+            href={`/logement/${item.id}`}
+          />
         ))}
       </section>
     </div>
