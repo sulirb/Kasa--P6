@@ -2,6 +2,7 @@ import Card from "../components/card";
 import { useFetch } from "../utils/api";
 import "./home.scss";
 import { HomeBanner } from "../components/banner";
+import Error from "./error";
 
 function Home() {
   const { data, isLoading, error } = useFetch();
@@ -11,7 +12,7 @@ function Home() {
   }
 
   if (error) {
-    return <div>Erreur lors du chargement des données.</div>;
+    return <Error />;
   }
   return (
     <div>

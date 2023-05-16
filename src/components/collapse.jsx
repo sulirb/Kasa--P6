@@ -3,71 +3,71 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "./collapse.scss";
 
 function Collapse() {
-  const [visible, setVisible] = useState([false, false, false, false]);
+  const [open, setOpen] = useState([false, false, false, false]);
 
   return (
-    <div className="collapse-container">
-      <button
+    <ul className="collapse-container">
+      <li
         className="collapse-container__toggle"
-        onClick={() => setVisible([!visible[0], false, false, false])}
+        onClick={() => setOpen([!open[0], false, false, false])}
       >
         <span>Fiabilité</span>
-        {visible[0] ? <FaChevronUp /> : <FaChevronDown />}
-      </button>
+        {open[0] ? <FaChevronDown /> : <FaChevronUp />}
+      </li>
 
-      {visible[0] && (
-        <div>
+      {open[0] && (
+        <p className="collapse-container__toggle__p">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
           photos sont conformes aux logements, et toutes les informations sont
           régulièrement vérifiées par nos équipes.
-        </div>
+        </p>
       )}
-      <button
+      <li
         className="collapse-container__toggle"
-        onClick={() => setVisible([false, !visible[1], false, false])}
+        onClick={() => setOpen([false, !open[1], false, false])}
       >
         <span>Respect</span>
-        {visible[1] ? <FaChevronUp /> : <FaChevronDown />}
-      </button>
-      {visible[1] && (
-        <div>
+        {open[1] ? <FaChevronDown /> : <FaChevronUp />}
+      </li>
+      {open[1] && (
+        <p className="collapse-container__toggle__p">
           La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
           comportement discriminatoire ou de perturbation du voisinage
           entraînera une exclusion de notre plateforme.
-        </div>
+        </p>
       )}
-      <button
+      <li
         className="collapse-container__toggle"
-        onClick={() => setVisible([false, false, !visible[2], false])}
+        onClick={() => setOpen([false, false, !open[2], false])}
       >
         <span>Service</span>
-        {visible[2] ? <FaChevronUp /> : <FaChevronDown />}
-      </button>
-      {visible[2] && (
-        <div>
+        {open[2] ? <FaChevronDown /> : <FaChevronUp />}
+      </li>
+      {open[2] && (
+        <p className="collapse-container__toggle__p">
           Nos équipes se tiennent à votre disposition pour vous fournir une
           expérience parfaite. N&apos;hésitez pas à nous contacter si vous avez
           la moindre question.
-        </div>
+        </p>
       )}
-      <button
+      <li
         className="collapse-container__toggle"
-        onClick={() => setVisible([false, false, false, !visible[3]])}
+        onClick={() => setOpen([false, false, false, !open[3]])}
       >
         <span>Sécurité</span>
-        {visible[3] ? <FaChevronUp /> : <FaChevronDown />}
-      </button>
-      {visible[3] && (
-        <div>
+        {open[3] ? <FaChevronDown /> : <FaChevronUp />}
+      </li>
+      {open[3] && (
+        <p className="collapse-container__toggle__p">
           La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
           pour les voyageurs, chaque logement correspond aux critères de
           sécurité établis par nos services. En laissant une note aussi bien à
           l&apos;hôte qu&apos;au locataire, cela permet à nos équipes de
           vérifier que les standards sont bien respectés. Nous organisons
           également des ateliers sur la sécurité domestique pour nos hôtes.
-        </div>
+        </p>
       )}
-    </div>
+    </ul>
   );
 }
 
