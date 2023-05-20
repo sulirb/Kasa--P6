@@ -12,18 +12,16 @@
     &__ul {
       list-style-type: none;
       display: flex;
-      &__li {
-        &__a {
-          color: $primary-color;
-          text-decoration: none;
-          margin: 15px;
-          font-size: 24px;
-          font-weight: 500;
-        }
-        &__a:hover {
-          text-decoration: underline;
-        }
-      }
+    }
+    &_link {
+      color: $primary-color;
+      text-decoration: none;
+      margin: 15px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    &_link:hover {
+      text-decoration: underline;
     }
   }
 }

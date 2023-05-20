@@ -8,12 +8,12 @@ function Collapse({ title, children }) {
   const toggleOpen = () => setOpen((open) => !open);
   return (
     <div className="collapse-container">
-      <div className="collapse-container__toggle" onClick={toggleOpen}>
+      <div className="collapse-container_toggle" onClick={toggleOpen}>
         <span>{title}</span>
         {open ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
-      {open && <p className="collapse-container__toggle_p">{children}</p>}
+      {open && <p className="collapse-container_message">{children}</p>}
     </div>
   );
 }

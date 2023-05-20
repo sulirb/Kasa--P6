@@ -11,12 +11,12 @@ function Header() {
       <nav className="header__nav">
         <ul className="header__nav__ul">
           <li>
-            <Link to="/" className="header__nav__ul__li__a">
+            <Link to="/" className="header__nav_link">
               Accueil
             </Link>
           </li>
           <li>
-            <Link to="/about" className="header__nav__ul__li__a">
+            <Link to="/about" className="header__nav_link">
               À propos
             </Link>
           </li>
