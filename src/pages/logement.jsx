@@ -24,7 +24,7 @@ function Fiche() {
 
   return (
     <>
-      <pre> {JSON.stringify(data, null, 2)}</pre>
+      {/*<pre> {JSON.stringify(data, null, 2)}</pre>*/}
       <div className="house">
         <img src={firstImage} />
 

@@ -1,4 +1,4 @@
-import { BsStar, BsStarFill } from "react-icons/bs";
+import { BsStarFill } from "react-icons/bs";
 
 function Stars(rating) {
   const starIcons = [];
@@ -8,7 +8,12 @@ function Stars(rating) {
   }
 
   while (starIcons.length < 5) {
-    starIcons.push(<BsStar key={`star-empty-${starIcons.length}`} />);
+    starIcons.push(
+      <BsStarFill
+        key={`star-empty-${starIcons.length}`}
+        className="not-filled"
+      />
+    );
   }
 
   return starIcons;
