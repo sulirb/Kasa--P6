@@ -1,6 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useFetchHouse } from "../utils/api";
+import Collapse from "../components/collapse";
 import Error from "./error";
+import "./logement.scss";
+import Tag from "../components/tag";
+import Equipment from "../components/equipments";
 
 function Fiche() {
   let { ficheNumber } = useParams();
@@ -19,17 +23,34 @@ function Fiche() {
   return (
     <>
       <pre> {JSON.stringify(data, null, 2)}</pre>
-      <h1>Fiche logement {ficheNumber}</h1>
-      <div className="house_container">
+      <div className="house">
         <img src={firstImage} />
 
-        <div>
-          <div>
+        <div className="house__intro">
+          <div className="house__intro_title">
             <h2>{data.title}</h2>
-            <p>{data.location}</p>
+            <span>{data.location}</span>
           </div>
-          <p>{data.host.name}</p>
-          <img src={data.host.picture} alt={data.host.name} />
+          <div className="house__intro_name">
+            <span>{data.host.name}</span>
+            <img src={data.host.picture} alt={data.host.name} />
+          </div>
+        </div>
+        <div className="house__ratag">
+          <div className="tag-container">
+            {data.tags.map((e, index) => (
+              <Tag key={index} tag={e} />
+            ))}
+          </div>
+          <p>{data.rating}</p>
+        </div>
+        <div className="house__collapsible">
+          <Collapse title="Description">{data.description}</Collapse>
+          <Collapse title="Equipements">
+            {data.equipments.map((e, index) => (
+              <Equipment key={index} equipment={e} />
+            ))}
+          </Collapse>
         </div>
       </div>
     </>

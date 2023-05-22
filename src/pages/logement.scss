@@ -1,0 +1,69 @@
+@import "../global";
+
+.house {
+  color: $primary-color;
+  margin: 2rem 5rem;
+
+  img {
+    margin: 1rem 0;
+    height: 415px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__intro {
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      h2 {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0.2em 0;
+      }
+      p {
+        font-size: 18px;
+        margin: 0.2em;
+      }
+    }
+
+    &_name {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__ratag {
+    display: flex;
+    justify-content: space-between;
+
+    .tag-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__collapsible {
+    display: flex;
+    justify-content: space-between;
+
+    .collapse-container {
+      width: 100%;
+      margin: 0;
+      &_toggle {
+        margin: 0.3em 0;
+      }
+      &_message {
+        font-size: 18px;
+        padding: 0.6em 1em;
+      }
+    }
+  }
+}
