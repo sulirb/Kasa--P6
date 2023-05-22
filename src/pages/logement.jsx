@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useFetchHouse } from "../utils/api";
-import Collapse from "../components/collapse";
-import Error from "./error";
 import "./logement.scss";
+import Error from "./error";
+import Collapse from "../components/collapse";
 import Tag from "../components/tag";
 import Equipment from "../components/equipments";
+import Stars from "../components/stars";
 
 function Fiche() {
   let { ficheNumber } = useParams();
@@ -19,6 +20,7 @@ function Fiche() {
   }
 
   const firstImage = data.pictures[0];
+  const starIcons = Stars(data.rating);
 
   return (
     <>
@@ -42,7 +44,13 @@ function Fiche() {
               <Tag key={index} tag={e} />
             ))}
           </div>
-          <p>{data.rating}</p>
+          <div className="rating-container">
+            {starIcons.map((icon, index) => (
+              <span className="rating-star" key={index}>
+                {icon}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="house__collapsible">
           <Collapse title="Description">{data.description}</Collapse>

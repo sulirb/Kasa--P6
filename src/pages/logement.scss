@@ -30,6 +30,7 @@
 
     &_name {
       display: flex;
+      justify-content: space-between;
       align-items: center;
 
       img {
@@ -37,25 +38,39 @@
         width: 64px;
         height: 64px;
       }
+
+      span {
+        width: 50%;
+        text-align: end;
+      }
     }
   }
 
   &__ratag {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
 
     .tag-container {
       display: flex;
       align-items: center;
+    }
+
+    .rating-container {
+      .rating-star {
+        margin: 0.3em;
+        font-size: 24px;
+      }
     }
   }
 
   &__collapsible {
     display: flex;
     justify-content: space-between;
-
+    width: 100%;
     .collapse-container {
-      width: 100%;
+      width: 48%;
       margin: 0;
       &_toggle {
         margin: 0.3em 0;
