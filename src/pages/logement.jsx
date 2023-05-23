@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useFetchHouse } from "../utils/api";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "./logement.scss";
 import Error from "./error";
 import Collapse from "../components/collapse";
 import Tag from "../components/tag";
 import Equipment from "../components/equipments";
 import Stars from "../components/stars";
+import Carousel from "../components/carousel";
 
 function Fiche() {
   let { ficheNumber } = useParams();
@@ -20,22 +20,13 @@ function Fiche() {
     return <Error />;
   }
 
-  const firstImage = data.pictures[0];
   const starIcons = Stars(data.rating);
 
   return (
     <>
       {/*<pre> {JSON.stringify(data, null, 2)}</pre>*/}
       <div className="house">
-        <div className="chevron">
-          <div className="chevron_left">
-            <BsChevronLeft />
-          </div>
-          <div className="chevron_right">
-            <BsChevronRight />
-          </div>
-        </div>
-        <img src={firstImage} />
+        <Carousel photos={data.pictures} />
         <div className="house__intro">
           <div className="house__intro_title">
             <h2>{data.title}</h2>

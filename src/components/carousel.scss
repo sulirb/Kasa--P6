@@ -1,0 +1,27 @@
+.chevron {
+  &_left {
+    cursor: pointer;
+    margin-top: 8rem;
+    position: absolute;
+    font-size: 140px;
+    font-weight: 700;
+    color: #fff;
+  }
+  &_right {
+    cursor: pointer;
+    margin-top: 8rem;
+    right: 5rem;
+    position: absolute;
+    font-size: 140px;
+    font-weight: 700;
+    color: #fff;
+  }
+  img {
+    margin: 1rem 0;
+    height: 415px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+  }
+}

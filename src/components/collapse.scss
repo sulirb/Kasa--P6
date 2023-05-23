@@ -3,7 +3,7 @@
 .collapse-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem 6rem 1rem;
+  margin: 0 6rem 1rem;
   padding: 0;
 
   &_toggle {
@@ -11,8 +11,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 0.3em;
-    padding: 0.3em;
-    border-radius: 2px;
+    padding: 0.5em 0.7em;
+    border-radius: 5px;
     border-color: $primary-color;
     background-color: $primary-color;
     font-size: 22px;
