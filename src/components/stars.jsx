@@ -4,16 +4,13 @@ function Stars(rating) {
   const starIcons = [];
 
   for (let i = 0; i < Math.floor(rating); i++) {
-    starIcons.push(<BsStarFill key={`star-${i}`} />);
+    starIcons.push(<BsStarFill />);
+    console.log(starIcons);
   }
 
   while (starIcons.length < 5) {
-    starIcons.push(
-      <BsStarFill
-        key={`star-empty-${starIcons.length}`}
-        className="not-filled"
-      />
-    );
+    starIcons.push(<BsStarFill className="not-filled" />);
+    console.log(starIcons);
   }
 
   return starIcons;

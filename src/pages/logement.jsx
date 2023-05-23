@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useFetchHouse } from "../utils/api";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "./logement.scss";
 import Error from "./error";
 import Collapse from "../components/collapse";
@@ -26,8 +27,15 @@ function Fiche() {
     <>
       {/*<pre> {JSON.stringify(data, null, 2)}</pre>*/}
       <div className="house">
+        <div className="chevron">
+          <div className="chevron_left">
+            <BsChevronLeft />
+          </div>
+          <div className="chevron_right">
+            <BsChevronRight />
+          </div>
+        </div>
         <img src={firstImage} />
-
         <div className="house__intro">
           <div className="house__intro_title">
             <h2>{data.title}</h2>
