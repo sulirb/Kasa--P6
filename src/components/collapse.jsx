@@ -13,7 +13,7 @@ function Collapse({ title, children }) {
         {open ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
-      {open && <p className="collapse-container_message">{children}</p>}
+      {open && <div className="collapse-container_message">{children}</div>}
     </div>
   );
 }

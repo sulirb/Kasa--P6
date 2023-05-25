@@ -1,5 +1,6 @@
 import { AboutBanner } from "../components/banner";
 import Collapse from "../components/collapse";
+import "./about.scss";
 
 function Propos() {
   return (

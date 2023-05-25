@@ -10,7 +10,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.3em;
     padding: 0.5em 0.7em;
     border-radius: 5px;
     border-color: $primary-color;
@@ -25,5 +24,8 @@
     font-weight: 400;
     padding: 0.6em;
     margin: 0;
+    background-color: $back-color;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 }

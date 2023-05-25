@@ -23,10 +23,10 @@ function Carousel({ photos }) {
   return (
     <div className="chevron">
       <div className="chevron_left" onClick={previousSlide}>
-        <BsChevronLeft />
+        {photos.length > 1 && <BsChevronLeft />}
       </div>
       <div className="chevron_right" onClick={nextSlide}>
-        <BsChevronRight />
+        {photos.length > 1 && <BsChevronRight />}
       </div>
       <img src={currentImage} alt={`Picture ${currentIndex}`} />
     </div>

@@ -12,13 +12,9 @@ function Fiche() {
   let { ficheNumber } = useParams();
   const { data, isLoading, error } = useFetchHouse(ficheNumber);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <Error />;
-  }
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <Error />;
+  if (!data) return <Error />;
 
   const starIcons = Stars(data.rating);
 

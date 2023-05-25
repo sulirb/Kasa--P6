@@ -1,10 +1,12 @@
+@import "../global";
+
 .grid-container {
   margin: 2rem 5rem;
   padding: 4rem;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 4rem;
-  background-color: #f6f6f6;
+  background-color: $back-color;
   border-radius: 10px;
 }
 

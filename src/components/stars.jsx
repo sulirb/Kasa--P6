@@ -1,17 +1,10 @@
 import { BsStarFill } from "react-icons/bs";
 
+const stars = Array(5).fill(1);
 function Stars(rating) {
-  const starIcons = [];
-
-  for (let i = 0; i < Math.floor(rating); i++) {
-    starIcons.push(<BsStarFill />);
-  }
-
-  while (starIcons.length < 5) {
-    starIcons.push(<BsStarFill className="not-filled" />);
-  }
-
-  return starIcons;
+  return stars.map((_, i) => (
+    <BsStarFill className={+rating <= i ? "not-filled" : ""} key={i} />
+  ));
 }
 
 export default Stars;

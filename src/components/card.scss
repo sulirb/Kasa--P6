@@ -10,7 +10,6 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    background-image: linear-gradient(180deg, #ffffff00, #00000050);
 
     &__picture {
       width: 100%;
@@ -28,7 +27,7 @@
       height: 25%;
       padding: 0.5em;
       box-sizing: border-box;
-
+      background-image: linear-gradient(180deg, #ffffff00, #00000050);
       &__span {
         width: 60%;
         font-weight: 500;
