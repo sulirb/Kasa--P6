@@ -28,6 +28,9 @@ function Carousel({ photos }) {
       <div className="chevron_right" onClick={nextSlide}>
         {photos.length > 1 && <BsChevronRight />}
       </div>
+      <span className="number">
+        {currentIndex + 1}/{photos.length}
+      </span>
       <img src={currentImage} alt={`Picture ${currentIndex}`} />
     </div>
   );
