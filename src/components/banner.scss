@@ -21,3 +21,20 @@
     font-size: 48px;
   }
 }
+
+@media screen and (max-width: 798px) {
+  .banner {
+    height: 130px;
+    margin: 2rem 1rem;
+  }
+  .banner__txt {
+    font-size: 30px;
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .banner__txt {
+    font-size: 35px;
+  }
+}
