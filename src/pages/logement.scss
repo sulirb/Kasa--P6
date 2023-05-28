@@ -4,11 +4,20 @@
   color: $primary-color;
   margin: 2rem 5rem;
 
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
   &__intro {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
 
     &_title {
+      margin-bottom: 1rem;
       h2 {
         font-size: 36px;
         font-weight: 500;
@@ -18,6 +27,12 @@
         font-size: 18px;
         margin: 0.2em;
       }
+    }
+
+    .tag-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     &_name {
@@ -41,14 +56,9 @@
 
   &__ratag {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0;
-
-    .tag-container {
-      display: flex;
-      align-items: center;
-    }
 
     .rating-container {
       .rating-star {
@@ -73,6 +83,48 @@
         font-size: 18px;
         padding: 0.6em 1em;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .house {
+    margin: 2rem 1rem;
+  }
+  .chevron_left,
+  .chevron_right {
+    margin-top: 11rem;
+    font-size: 60px;
+  }
+  .chevron_right {
+    right: 1rem;
+  }
+  .number {
+    display: none;
+  }
+  .house-flex {
+    flex-direction: column;
+  }
+  .house__intro {
+    width: auto;
+    margin-bottom: 0.6rem;
+  }
+  .house__intro_title {
+    h2 {
+      font-size: 22px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  .house__ratag {
+    flex-direction: row-reverse;
+  }
+  .house__collapsible {
+    flex-direction: column;
+    .collapse-container {
+      width: 100%;
+      margin: 0.8rem 0;
     }
   }
 }

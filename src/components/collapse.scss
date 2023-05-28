@@ -3,7 +3,7 @@
 .collapse-container {
   display: flex;
   flex-direction: column;
-  margin: 0 6rem 1rem;
+  margin: 0 0 1rem;
   padding: 0;
 
   &_toggle {
@@ -27,5 +27,14 @@
     background-color: $back-color;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .collapse-container {
+    margin: 1.3rem 0;
+  }
+  .collapse-container_message {
+    font-size: 16px;
   }
 }

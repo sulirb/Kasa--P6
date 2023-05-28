@@ -23,28 +23,30 @@ function Fiche() {
       {/*<pre> {JSON.stringify(data, null, 2)}</pre>*/}
       <div className="house">
         <Carousel photos={data.pictures} />
-        <div className="house__intro">
-          <div className="house__intro_title">
-            <h2>{data.title}</h2>
-            <span>{data.location}</span>
+        <div className="house-flex">
+          <div className="house__intro">
+            <div className="house__intro_title">
+              <h2>{data.title}</h2>
+              <span>{data.location}</span>
+            </div>
+            <div className="tag-container">
+              {data.tags.map((e, index) => (
+                <Tag key={index} tag={e} />
+              ))}
+            </div>
           </div>
-          <div className="house__intro_name">
-            <span>{data.host.name}</span>
-            <img src={data.host.picture} alt={data.host.name} />
-          </div>
-        </div>
-        <div className="house__ratag">
-          <div className="tag-container">
-            {data.tags.map((e, index) => (
-              <Tag key={index} tag={e} />
-            ))}
-          </div>
-          <div className="rating-container">
-            {starIcons.map((icon, index) => (
-              <span className="rating-star" key={index}>
-                {icon}
-              </span>
-            ))}
+          <div className="house__ratag">
+            <div className="house__intro_name">
+              <span>{data.host.name}</span>
+              <img src={data.host.picture} alt={data.host.name} />
+            </div>
+            <div className="rating-container">
+              {starIcons.map((icon, index) => (
+                <span className="rating-star" key={index}>
+                  {icon}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
         <div className="house__collapsible">

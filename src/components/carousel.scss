@@ -28,8 +28,17 @@
     position: absolute;
     font-weight: 500;
     font-size: 18px;
-    margin: 20rem;
     color: #ffffff;
-    text-align: center;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .chevron_left,
+  .chevron_right {
+    margin-top: 11rem;
+    font-size: 60px;
+  }
+  .number {
+    display: none;
   }
 }

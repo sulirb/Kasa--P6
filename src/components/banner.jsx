@@ -13,7 +13,7 @@ export function HomeBanner() {
 
 export function AboutBanner() {
   return (
-    <div className="banner">
+    <div className="about-banner">
       <img src={LandscapeAbout} alt="landscape" className="banner__img" />
     </div>
   );
