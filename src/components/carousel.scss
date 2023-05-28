@@ -25,6 +25,9 @@
     object-fit: cover;
   }
   .number {
+    width: calc(100% - 10rem);
+    text-align: center;
+    margin-top: 23rem;
     position: absolute;
     font-weight: 500;
     font-size: 18px;
@@ -33,10 +36,14 @@
 }
 
 @media screen and (max-width: 798px) {
-  .chevron_left,
+  .chevron_left {
+    margin-top: 11rem;
+    font-size: 60px;
+  }
   .chevron_right {
     margin-top: 11rem;
     font-size: 60px;
+    right: 1rem;
   }
   .number {
     display: none;

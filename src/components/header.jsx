@@ -1,6 +1,6 @@
 import Logo from "../assets/logo.png";
 import "./header.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,14 +11,24 @@ function Header() {
       <nav className="header__nav">
         <ul className="header__nav__ul">
           <li>
-            <Link to="/" className="header__nav_link">
+            <NavLink
+              exact
+              to="/"
+              className="header__nav_link"
+              activeClassName="active"
+            >
               Accueil
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="header__nav_link">
+            <NavLink
+              exact
+              to="/about"
+              className="header__nav_link"
+              activeClassName="active"
+            >
               À propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

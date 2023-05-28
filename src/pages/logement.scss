@@ -89,19 +89,9 @@
 
 @media screen and (max-width: 798px) {
   .house {
-    margin: 2rem 1rem;
+    margin: 2rem 1rem 5rem;
   }
-  .chevron_left,
-  .chevron_right {
-    margin-top: 11rem;
-    font-size: 60px;
-  }
-  .chevron_right {
-    right: 1rem;
-  }
-  .number {
-    display: none;
-  }
+
   .house-flex {
     flex-direction: column;
   }
