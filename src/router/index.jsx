@@ -7,7 +7,6 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 const base = import.meta.env.BASE_URL;
-
 export function Routers() {
   return (
     <Router basename={base}>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import dataUrl from "../data.json?url";
 
 export function useFetch(method, url, body, options = {}) {
   const [data, setData] = useState([]);
@@ -23,9 +24,9 @@ export function useFetch(method, url, body, options = {}) {
   return { isLoading, data, error };
 }
 
-export const useFetchHouses = () => useFetch("GET", "/data.json");
+export const useFetchHouses = () => useFetch("GET", dataUrl);
 export const useFetchHouse = (id) => {
-  const { data, ...rest } = useFetch("GET", "/data.json");
+  const { data, ...rest } = useFetch("GET", dataUrl);
   const house = data.find((house) => house.id === id);
   return { data: house, ...rest };
 };
