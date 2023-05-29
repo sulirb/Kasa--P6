@@ -42,7 +42,8 @@
   .card {
     max-width: 798px;
   }
-  .card__container__picture {
-    height: 600px;
+  .card__container {
+    height: auto;
+    aspect-ratio: 16/9;
   }
 }
