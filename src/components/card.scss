@@ -40,6 +40,9 @@
 
 @media screen and (max-width: 798px) {
   .card {
-    max-width: 800px;
+    max-width: 798px;
+  }
+  .card__container__picture {
+    height: 600px;
   }
 }
