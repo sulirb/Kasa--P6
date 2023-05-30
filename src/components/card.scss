@@ -1,5 +1,5 @@
 .card {
-  max-width: 340px;
+  max-width: 645px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
@@ -38,9 +38,9 @@
   }
 }
 
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 767px) {
   .card {
-    max-width: 798px;
+    max-width: 767px;
   }
   .card__container {
     height: auto;
