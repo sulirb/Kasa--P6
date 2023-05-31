@@ -29,7 +29,7 @@ function Carousel({ photos }) {
         {photos.length > 1 && <BsChevronRight />}
       </div>
       <div className="number">
-        {currentIndex + 1}/{photos.length}
+        {photos.length > 1 && `${currentIndex + 1}/${photos.length}`}
       </div>
       <img src={currentImage} alt={`Picture ${currentIndex}`} />
     </div>
