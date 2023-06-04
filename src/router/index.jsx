@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  Navigate,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Home from "../pages/home";
 import Propos from "../pages/about";
 import Fiche from "../pages/logement";
@@ -13,7 +18,8 @@ export function Routers() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/404" element={<Error />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
         <Route path="/about" element={<Propos />} />
         <Route path="/logement/:ficheNumber" element={<Fiche />} />
       </Routes>
