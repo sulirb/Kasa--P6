@@ -6,7 +6,7 @@ import Collapse from "../components/collapse";
 import Tag from "../components/tag";
 import Equipment from "../components/equipments";
 import Stars from "../components/stars";
-import Carousel from "../components/carousel";
+import Slideshow from "../components/slideshow";
 
 function Fiche() {
   let { ficheNumber } = useParams();
@@ -22,7 +22,7 @@ function Fiche() {
     <>
       {/*<pre> {JSON.stringify(data, null, 2)}</pre>*/}
       <div className="house">
-        <Carousel photos={data.pictures} />
+        <Slideshow photos={data.pictures} />
         <div className="house-flex">
           <div className="house__intro">
             <div className="house__intro_title">

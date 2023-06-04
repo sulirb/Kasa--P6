@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import "./carousel.scss";
+import "./slideshow.scss";
 import PropTypes from "prop-types";
 
-function Carousel({ photos }) {
+function Slideshow({ photos }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previousSlide = () => {
@@ -36,8 +36,8 @@ function Carousel({ photos }) {
   );
 }
 
-Carousel.propTypes = {
+Slideshow.propTypes = {
   photos: PropTypes.array.isRequired,
 };
 
-export default Carousel;
+export default Slideshow;
